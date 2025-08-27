@@ -1,21 +1,41 @@
+// ...existing code...
 import React from 'react';
-
 
 const Home: React.FC = () => {
   return (
-    <div style={{ maxWidth: '900px', margin: '2rem auto', padding: '2rem', background: '#f8f9fa', borderRadius: '12px', boxShadow: '0 2px 8px rgba(0,0,0,0.08)' }}>
-      <h2 style={{ color: '#2d2d2d', fontSize: '2.2rem', marginBottom: '1rem' }}>Welcome to GSale!</h2>
-      <p style={{ color: '#555', fontSize: '1.2rem', marginBottom: '2rem' }}>
+    <div className="max-w-5xl mx-auto my-8 p-6 bg-gray-100 rounded-xl shadow-sm">
+      <h2 className="text-3xl font-bold text-gray-800 mb-4">Welcome to GSale!</h2>
+      <p className="text-gray-600 text-lg mb-6">
         Discover amazing deals and shop the latest products in our e-commerce store.
       </p>
-      <div style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-        <div style={{ background: '#fff', borderRadius: '8px', boxShadow: '0 1px 4px rgba(0,0,0,0.07)', padding: '1rem', width: '220px', textAlign: 'center' }}>
-          <img src="https://via.placeholder.com/150" alt="Product" style={{ width: '100%', borderRadius: '6px' }} />
-          <h3 style={{ margin: '1rem 0 0.5rem', fontSize: '1.1rem' }}>Product Name</h3>
-          <p style={{ color: '#888', marginBottom: '0.5rem' }}>$29.99</p>
-          <button style={{ background: '#007bff', color: '#fff', border: 'none', borderRadius: '4px', padding: '0.5rem 1rem', cursor: 'pointer' }}>Add to Cart</button>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+          <img src="https://via.placeholder.com/300" alt="Product" className="w-full h-40 object-cover rounded-md mb-4" />
+          <h3 className="text-lg font-medium text-gray-800 mb-1">Product Name</h3>
+          <p className="text-gray-500 mb-3">$29.99</p>
+          <button className="mt-auto bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+            Add to Cart
+          </button>
         </div>
-        {/* Add more product cards here */}
+
+        <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+          <img src="https://via.placeholder.com/300" alt="Product" className="w-full h-40 object-cover rounded-md mb-4" />
+          <h3 className="text-lg font-medium text-gray-800 mb-1">Another Product</h3>
+          <p className="text-gray-500 mb-3">$49.99</p>
+          <button className="mt-auto bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+            Add to Cart
+          </button>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+          <img src="https://via.placeholder.com/300" alt="Product" className="w-full h-40 object-cover rounded-md mb-4" />
+          <h3 className="text-lg font-medium text-gray-800 mb-1">Featured Item</h3>
+          <p className="text-gray-500 mb-3">$79.99</p>
+          <button className="mt-auto bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+            Add to Cart
+          </button>
+        </div>
       </div>
     </div>
   );
