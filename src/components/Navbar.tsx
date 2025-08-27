@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import logo from '../../public/images/pf.jpg' //Logo
 
 const Navbar: React.FC = () => {
-    const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState(false); 
 
     return (
         <nav className="bg-gray-900 text-white">
@@ -10,7 +11,7 @@ const Navbar: React.FC = () => {
                 <div className="flex items-center justify-between h-16">
                     {/* Logo (left) */}
                     <Link to="/" className="flex items-center gap-3">
-                        <img src="/img/pf.jpg" alt="GSale logo" className="h-8 w-8 rounded-full object-cover" />
+                        <img src={logo} alt="GSale logo" className="h-8 w-8 rounded-full object-cover" /> {/* changed */}
                         <span className="font-semibold text-lg">GSale</span>
                     </Link>
 
